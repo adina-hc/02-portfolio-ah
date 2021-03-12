@@ -1,0 +1,198 @@
+/* Universal Settings */
+
+/* Template Variables */
+:root {
+    --about-me: #7395ae;
+    --wrk: #88BDBC;
+    --contact-me:#FFCCBC;
+    --resume: #5D5C61;
+    --work: #B1A296;
+    --header1: #557A95;
+    --light:#EEE2DC;
+    --header: #123C69;
+    --other2: #AC3B61;  
+}
+
+html {
+    background-color:var(--background);
+    margin: 0;
+}
+
+header {
+    background-color: var(--header);
+    height: 60%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    color: var(--light);
+    text-align: right;
+}
+
+figure h1 {
+    height: 10rem;
+    font-size: 2rem;
+    font-style: var(--background);
+    color: var(--light);
+    text-align: right;
+}
+
+.hero {
+    background-color: var(--header);
+}
+
+img {
+    display: block;
+    position: absolute;
+    top: auto;
+    float: left;
+    scroll-margin-left: 1rem;
+    border: solid 5px var(--header1);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 5px;
+    background-color: var(--resume);  
+}
+
+a:visited {
+    color: var(--header);
+    text-decoration: none;
+    
+}
+
+/* Color background for the Nav tabs */
+.abtm {
+    background-color: var(--about-me);
+}
+
+.wrk {
+    background-color: var(--work);
+}
+
+.rsm {
+    background-color: var(--resume);
+}
+
+.cntm {
+    background-color: var(--contact-me);
+}
+
+nav ul {
+    position: sticky;
+    top: 0;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 0;
+    border: 1px solid;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 10pc;
+    align-content: center;
+    text-align: center;
+}
+
+.scroll {
+    background-image: "";
+    min-height: 500px;
+/* scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+body {
+    font-size: 1.1rem;
+}
+
+h2 {
+    margin; auto;
+    font-size: 1.5em;
+}
+
+article {
+    width: 95%;
+    background-color: var(--light);
+    opacity: 0.5;
+    border: #B1A296;
+    border-radius: 25px;
+    color: var(--header);
+    padding: 3em;
+    float: right;
+}
+
+.about-me {
+    background-color: var(--about-me);
+    color: var(--light);
+    display: grid;
+    grid-column-gap: 50px;
+    grid-template-columns: 100px auto auto;
+    padding: 10px;
+}
+
+.work{
+    background-color: var(--work);
+    color: var(--light);
+    display: grid;
+    grid-column-gap: 50px;
+    grid-template-columns: 100px auto auto;
+    padding: 10px;
+}
+
+.resume{
+    background-color: var(--resume);
+    color: var(--light);
+    display: grid;
+    grid-column-gap: 50px;
+    grid-template-columns: 100px auto auto;
+    padding: 10px;
+}
+
+footer {
+    background-color: var(--contact-me);   
+}
+
+.contact-me {
+    color: var(--light);
+    display: grid;
+    padding: 10px;
+}
+
+.contact-information li {
+    display: inline-block;
+    width: 5pc;
+    align-content: right;
+    margin-left: 6em;
+}
+
+@media screen{
+
+
+}
+
+/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design 
+@media screen and (min-width: 768px) {
+   /* on tablets, set columns to only be 50% of the width and not grow 
+  .xxxx {
+    flex: 0 0 50%;
+    max-width: 50%;
+  } */
+
+    /* select the last child to grow to full width if it has space to grow 
+  .card-column:last-child {
+    flex-grow: 1;
+  }
+} */
+
+/* media query for larger screens 
+@media screen and (min-width: 992px) {
+  header, main {
+    width: 75%;
+  }
+
+    /* xxxx {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  } */
+
