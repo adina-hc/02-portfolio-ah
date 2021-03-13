@@ -21,7 +21,7 @@ Features:
 - Dynamic scrolling 
     *UI scrolls to the section with titled images of the developer's applications
 - Images included under work section:
-    On hover, images grow in size as they are presented to the reader
+    On click, images grow in size as they are presented to the reader
 - Responsive layout:
     Content adapts to the page when resized on various screen and devices.
 
@@ -30,3 +30,4 @@ SAMPLE:
 *** to include image/mock-up
 
 Link: ... to include link
+![portfolio demo](#)
