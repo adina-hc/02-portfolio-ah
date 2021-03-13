@@ -14,6 +14,7 @@
     --light:#EEE2DC;
     --light2:#FBEEC1;
     --header: #123C69;
+    --header2: black;
     --contact: #AC3B61;  
 }
 
@@ -24,9 +25,9 @@ html, body {
 }
 /* Header general settings */
 header {
-    background-color: var(--header);
-    height: 20%;
+    background-color: var(--header2);
     width: 100%;
+    height: 100px;
     margin: 0 auto;
     padding: 0;
     color: var(--light);
@@ -65,16 +66,16 @@ figure h1 {
 
 /* Picture attributes*/
 img {
-    display: block;
+    display: absolute;
     position: absolute;
-    top: auto;
+    top: 15%;
     float: left;
-    scroll-margin-left: 1rem;
-    border: solid 5px var(--header1);
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    /*scroll-margin-left: 1rem;*/
+    margin-left: 0.5rem;
+    /* border: solid 5px var(--about-me); */
+    border-radius: 20px;
     padding: 5px;
-    background-color: var(--resume);  
+    background-color: var(--about-me);  
 }
 
 /* Color background for the Nav tabs */
@@ -103,9 +104,7 @@ nav ul {
 nav ul li{
     display: inline-block;
     padding: 0.4em;
-    border: 1px solid var(--header);
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    border-radius: 10px;
     width: 10pc;
     align-content: center;
     text-align: center;
@@ -121,7 +120,6 @@ a:visited {
     color: var(--light);
     text-decoration: none;
     border-color: var(--header);
-
 }
 
 body {
@@ -166,14 +164,15 @@ main figure {
     grid-template-columns: 1fr 4fr ;
     justify-content: center;
     align-content: center;
-
 }
 
-.work-boxes figure {
+/* ---- FIX THIS ---- */
+/*.work-boxes figure, */.work-html, .work-css, .work-js{
     width: 200px;
     height: 200px;
     flex: 2 1 50px;
     display: inline-flex;
+    justify-content: center;
 }    
 
 /* On hover sections grow */
@@ -229,7 +228,6 @@ footer section h2 {
 }
 
 .contact-information li {
-    float: right;
     display: inline-block;
     width: 5pc;
     align-content: right;
@@ -237,31 +235,12 @@ footer section h2 {
 }
 
 
-/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design 
-@media screen and (min-width: 768px) {
-   /* on tablets, set columns to only be 50% of the width and not grow 
-  .xxxx {
-    flex: 0 0 50%;
-    max-width: 50%;
-  } */
+/* Media Queries for Devices */
 
-    /* select the last child to grow to full width if it has space to grow 
-  .card-column:last-child {
-    flex-grow: 1;
-  }
-} */
+/* Desktop */
 
-/* media query for larger screens 
-@media screen and (min-width: 992px) {
-  header, main {
-    width: 75%;
-  }
 
-    /* xxxx {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-  } */
+/* Tablets */
 
-/**** practice ***/
 
-@media screen
+/* Mobile */
