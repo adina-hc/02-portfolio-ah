@@ -2,85 +2,77 @@
 
 /* Template Variables */
 :root {
-    --about-me: #7395ae;
+    --aboutme: #7395ae;
     --wrk: #88BDBC;
-    --wrkop1: #85DCB;
     --contact-opt:#D1E8E2;
-    --contact-me:#FFCCBC;
-    --surfer:#EDC7B7;
     --resume: #5D5C61;
     --work: #B1A296;
     --header1: #557A95;
     --light:#EEE2DC;
     --light2:#FBEEC1;
-    --header: #123C69;
-    --header2: black;
-    --contact: #AC3B61;  
+    --header: #093565;
+    --base: black;
+    --contact: #AC3B61;
+    --cntme:#080F5B;
+    --about-me: #116466;
+    --abm: #1C3334; 
+    --title-fonts: "Aktiv Grotesk","Segoe UI"; 
+    --other-fonts:'Source Sans Pro ExtraLight','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 html, body {
-    background-color:var(--background);
     /* Add scroll effect */
     scroll-behavior: smooth;
 }
+
+/* Banner for Header */
+.banner {
+    background-image: url(../images/matrix.jpg);
+    background-size:cover;
+    background-position:center;
+    color: transparent;
+    width: 100%;
+    display:block;
+}
 /* Header general settings */
 header {
-    background-color: var(--header2);
+    background-color: var(--base);
     width: 100%;
-    height: 100px;
+    height: 15rem;
     margin: 0 auto;
     padding: 0;
     color: var(--light);
     text-align: right;
 }
 
-/* Banner for Header */
-.banner {
-    width: 100%;
-    display:block;
-}
-
-.banner > .banner-image {
-    width: 100%;
-    display:block;
-    float: unset;
-
-}
-
-/* Picture */
-figure h1 {
+/* Name */
+h1 {
+    width:100%;
     height: 10rem;
-    font-size: 2rem;
+    font-family: var(--other-fonts);
+    font-size: 3rem;
     font-style: var(--background);
     color: var(--light);
-    text-align: right;
-    width:100%;
+    justify-content: right;
     display:block;
 }
 
-/* Picture area */
+/* Profile picture area */
 .profile-picture {
-    background-color: var(--header);
-
-}
-
-/* Picture attributes*/
-img {
-    display: absolute;
+    display: block;
     position: absolute;
-    top: 15%;
-    float: left;
-    /*scroll-margin-left: 1rem;*/
+    top: 5%;
+    left: 2%;
     margin-left: 0.5rem;
-    /* border: solid 5px var(--about-me); */
     border-radius: 20px;
     padding: 5px;
-    background-color: var(--about-me);  
+    height: 150px;
+    width: 150px;
 }
 
 /* Color background for the Nav tabs */
 .tab-about {
-    background-color: var(--about-me);
+    background-color: var(--abm);
 }
 
 .tab-work {
@@ -92,7 +84,7 @@ img {
 }
 
 .tab-contact {
-    background-color: var(--contact);
+    background-color: var(--base);
 }
 
 nav ul {
@@ -113,26 +105,27 @@ nav ul li{
 /* Remove underline text from links */
 a:link {
     text-decoration: none;
-    color: var(--work)
+    color: var(--contact-opt)
 }
 
+/* Visited links */
 a:visited {
     color: var(--light);
     text-decoration: none;
-    border-color: var(--header);
 }
 
 body {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 h2 {
     margin; auto;
-    font-size: 1.2em;
-    align-content: left;
+    font-size: 1.6rem;
+    align-content: right;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-main figure {
+main img {
     background-color: var(--light);
     opacity: 0.5;
     border: #B1A296;
@@ -142,37 +135,62 @@ main figure {
     display: flex;
 }
 
+/* Setting Sections Height */
+.about-me, .work, .resume {
+    height: 400px;
+}
+
+article {
+    background-color: var(--light);
+    opacity: 0.4;
+    border-radius: 25px;
+    padding: 3em;
+    margin: 1em;
+}
+
+article p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:var(--abm);
+}
+
 .about-me {
-    /* Adding scroll stop at start of element */
+    /* Adding scroll stop at the start of the section  */
     scroll-snap-align: start;
-    background-color: var(--about-me);
+    background-color: var(--abm);
+}
+
+.about-me, .resume {
     color: var(--light);
-    padding: 10px;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    padding: 10px;
     grid-column-gap: 10px;
-} 
+    grid-template-columns: 1fr 6fr;
+    padding: 10px;
+}
 
 .work {
     /* Adding scroll stop at start of element */
     scroll-snap-align: start;
     background-color: var(--work);
     color: var(--light);
-    display:flex;
+    /*display:flex;*/
     padding: 10px;
     display: grid;
-    grid-template-columns: 1fr 4fr ;
-    justify-content: center;
+    grid-template-columns: 1fr 4fr;
+}
+figure p {
+    text-align: center;
+    color: var(--about-me);
     align-content: center;
 }
 
 /* ---- FIX THIS ---- */
-/*.work-boxes figure, */.work-html, .work-css, .work-js{
-    width: 200px;
-    height: 200px;
+.work-boxes {
+    width: 300px;
+    height: 300px;
     flex: 2 1 50px;
     display: inline-flex;
-    justify-content: center;
+    align-content: right;
 }    
 
 /* On hover sections grow */
@@ -195,36 +213,35 @@ main figure {
     -webkit-transform: scale(1.5);
     -ms-transform: scale(1.5);;
 }
-
-
 .resume{
+    /* Adding scroll stop at the start of the section  */
     scroll-snap-align: start;
     background-color: var(--resume);
-    color: var(--light);
-    display: grid;
-    grid-column-gap: 10px;
-    grid-template-columns: 100px auto auto;
-    padding: 10px;
 }
 
 footer {
-    background-color: var(--contact); 
-    color: var(--light)  ;
+    background-color: var(--base); 
+    color: var(--light);
+    margin-bottom: 0;
 }
 
-footer section h2 {
+footer section {
     margin; auto;
     font-size: 1.2em;
     text-align: left;
 }
 
+footer p {
+    text-align: right;
+    margin-right: 1em;
+}
 .contact-me {
-    display:flex;
     scroll-snap-align: start;
+    display:grid;
+    grid-template-columns: 1fr 3fr;
     color: var(--light);
-    display: grid;
     padding: 10px;
-
+    flex:content;
 }
 
 .contact-information li {
@@ -244,3 +261,28 @@ footer section h2 {
 
 
 /* Mobile */
+@media only screen and (max-device-width: 480px) {
+        /*div#wrapper {
+            width: 400px;
+        }*/
+
+        header {
+            background-image: url(#);
+            height: 93px;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 140%;
+        }
+
+        main {
+            float: none;
+            width: 100%;
+        }
+
+        nav {
+            float:none;
+            width: auto;
+        }
+    }
