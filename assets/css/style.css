@@ -7,11 +7,9 @@
     --resume: #5D5C61;
     --work: #B1A296;
     --light:#EEE2DC;
-    --light2:#FBEEC1;
-    --header: #093565;
     --base: black;
-    --contact: #AC3B61;
-    --about-me: #116466;
+    --contact: #1B2631;
+    --about-me:#023213 ;
     --abm: #1C3334; 
     --title-fonts: "Aktiv Grotesk","Segoe UI"; 
     --other-fonts:'Source Sans Pro ExtraLight','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -45,6 +43,11 @@ header {
 }
 
 /* Name */
+.developer-name{
+    flex: content;
+    margin-right: 1rem;
+}
+
 h1 {
     width:100%;
     height: 10rem;
@@ -71,7 +74,7 @@ h1 {
 
 /* Color background for the Nav tabs */
 .tab-about {
-    background-color: var(--abm);
+    background-color: var(--about-me);
 }
 
 .tab-work {
@@ -83,7 +86,7 @@ h1 {
 }
 
 .tab-contact {
-    background-color: var(--base);
+    background-color: var(--contact);
 }
 
 /* Navigation Bar */
@@ -91,6 +94,7 @@ h1 {
 nav ul {
     /* To make the nav bar static even if scrolling occurs - see if it works, otherwise remove */
     position: sticky; 
+    float: right;
     top: 0;
 }
 
@@ -128,6 +132,12 @@ h2 {
     font-family: var(--article-fonts)
 }
 
+/* Font opacity */
+.subtitles {
+    background-color: var(--light);
+    opacity: 0.5;
+}
+
 article {
     background-color: var(--light);
     opacity: 0.4;
@@ -142,11 +152,11 @@ article {
     /* Adding scroll stop at the start of the section  */
     scroll-snap-align: start;
     display: flex;
-    background-color: var(--abm);
+    background-color: var(--about-me);
 }
 
 .subtitle-about-me {
-    background-color: var(--abm);
+    background-color: var(--about-me);
     margin: 1em;
     width: 25%;
     color: var(--light)
@@ -163,9 +173,10 @@ article {
    margin: 5px;
    height: 30vh;
    width: 100%;
-   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color:var(--abm);
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   color:var(--about-me);
    overflow: auto;
-   background-color: var(--light);
+  /* background-color: var(--light)*/
 }  
 
 /* Work Section */
@@ -175,7 +186,7 @@ article {
     background-color: var(--work);
     display: flex;
    /* when the screen resizes, make it so our columns don't jump in size */
-    transition: flex-basis 500ms linear;
+   /* transition: flex-basis 500ms linear; */
 }
 
 .subtitle-work {
@@ -291,52 +302,76 @@ main img {
     color: var(--resume);
 }
 
-/* Footer Section */
-footer {
-    background-color: var(--base); 
-    color: var(--light);
-    margin-bottom: 0;
-}
-
-footer section {
-    margin: auto;
-    font-size: 1.2em;
-    text-align: left;
-    padding: 1em;
-}
-
-footer p {
-    text-align: right;
-    margin-right: 1.5em;
-}
+/* Contact Section */
 .contact-me {
+    /* Adding scroll stop at the start of the section  */
     scroll-snap-align: start;
-    display:grid;
-    grid-template-columns: 1fr 3fr;
-    color: var(--light);
-    padding: 10px;
-    flex:content;
+    display: flex;
+    background-color: var(--contact);
 }
 
-.contact-information li {
-    display: inline-block;
+.subtitle-contact {
+    background-color: var(--contact);
+    margin: 1em;
+    width: 25%;
+    color: var(--light)
+} 
+
+.contact-information {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-information li a {
+    display: inline;
     width: 5pc;
     align-content: right;
     margin-left: 6em;
 }
 
+/* Logo adjustments */
+.resize-phone, .resize-mail, .resize-fb {
+    width: 3rem;
+    size: 3rem;
+    align-items: center;
+}
+
+.resize-lnk {
+    width: 8rem;
+    size: 8rem;
+    align-items: center;
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--contact); 
+    color: var(--light);
+    padding: 1em;
+
+}
+
+/* reg 2021*/
+footer p {
+    text-align: center;
+} 
 
 /* Media Queries for Devices */
 /* Use flex-direction to stack the navbar, sidebar, and body */
 @media screen and (max-width: 768px) {
-    main, nav, article {
-    flex-direction: column;
-    margin: 0;
-    }
-    h1 {
-        height: 80%;
-        width: 80%;
-        align-items: right;
-    }
+    main, article, .developer-name {
+        flex-direction: column;
+        margin: 0;
+        }
+        h1 {
+            height: 80%;
+            width: 80%;
+            align-items: right;
+        }
+        nav {
+            display: column;
+            flex-direction: column;
+            width: 100%;
+        }
   }
 
