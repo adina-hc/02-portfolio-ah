@@ -30,4 +30,6 @@ SAMPLE:
 *** to include image/mock-up
 
 Link: ... to include link
-![portfolio demo](#)
+![portfolio demo](./assets/images/portfolio1st.png)
+![portfolio demo](./assets/images/portfolio2nd.png)
+[portfolio demo](https://adina-hc.github.io/portfolio-ah/)
