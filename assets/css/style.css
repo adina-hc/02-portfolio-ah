@@ -2,23 +2,21 @@
 
 /* Template Variables */
 :root {
-    --aboutme: #7395ae;
     --wrk: #88BDBC;
     --contact-opt:#D1E8E2;
     --resume: #5D5C61;
     --work: #B1A296;
-    --header1: #557A95;
     --light:#EEE2DC;
     --light2:#FBEEC1;
     --header: #093565;
     --base: black;
     --contact: #AC3B61;
-    --cntme:#080F5B;
     --about-me: #116466;
     --abm: #1C3334; 
     --title-fonts: "Aktiv Grotesk","Segoe UI"; 
     --other-fonts:'Source Sans Pro ExtraLight','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     --article-fonts:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --reset-fonts:Arial, Helvetica, sans-serif;
 }
 
 html, body {
@@ -202,13 +200,10 @@ main img {
     position: relative;
     left: 2em;
     top: 2em;
-    text-align: center;
     color: var(--light);
     text-transform: uppercase;
     text-shadow: 2px 2px;
     font-weight: bold;
-    align-content: flex-start;
-    justify-content: center;
     width: 10px;
     height: 10px;
 }
@@ -291,8 +286,9 @@ main img {
     color: var(--light)
 } 
 
-pre code {
-    font-family: var(--article-fonts);
+.article li {
+    font-family: var(--title-fonts);
+    color: var(--resume);
 }
 
 /* Footer Section */
