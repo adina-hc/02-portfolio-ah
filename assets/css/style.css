@@ -18,6 +18,7 @@
     --abm: #1C3334; 
     --title-fonts: "Aktiv Grotesk","Segoe UI"; 
     --other-fonts:'Source Sans Pro ExtraLight','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --article-fonts:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 html, body {
@@ -87,6 +88,8 @@ h1 {
     background-color: var(--base);
 }
 
+/* Navigation Bar */
+
 nav ul {
     /* To make the nav bar static even if scrolling occurs - see if it works, otherwise remove */
     position: sticky; 
@@ -102,7 +105,7 @@ nav ul li{
     text-align: center;
 }
 
-/* Remove underline text from links */
+/* To remove underline text from links */
 a:link {
     text-decoration: none;
     color: var(--contact-opt)
@@ -118,107 +121,181 @@ body {
     font-size: 1.2rem;
 }
 
+/* All Sections */
+
 h2 {
-    margin; auto;
+    text-align: left;
     font-size: 1.6rem;
-    align-content: right;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-main img {
-    background-color: var(--light);
-    opacity: 0.5;
-    border: #B1A296;
-    border-radius: 25px;
-    color: var(--header);
-    padding: 3em;
-    display: flex;
-}
-
-/* Setting Sections Height */
-.about-me, .work, .resume {
-    height: 400px;
+    align-content: left;
+    font-family: var(--article-fonts)
 }
 
 article {
     background-color: var(--light);
     opacity: 0.4;
     border-radius: 25px;
-    padding: 3em;
+    padding: 2em;
     margin: 1em;
 }
 
-article p {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:var(--abm);
-}
+/* About Me Section */
 
 .about-me {
     /* Adding scroll stop at the start of the section  */
     scroll-snap-align: start;
+    display: flex;
     background-color: var(--abm);
 }
 
-.about-me, .resume {
-    color: var(--light);
-    display: grid;
-    padding: 10px;
-    grid-column-gap: 10px;
-    grid-template-columns: 1fr 6fr;
-    padding: 10px;
+.subtitle-about-me {
+    background-color: var(--abm);
+    margin: 1em;
+    width: 25%;
+    color: var(--light)
+} 
+
+/* About me and Resume sections */
+.article-content{
+    width: 75%;
+    display: flex;
+    flex-direction: column; /* see if this is actually a row */
 }
 
+.article-content p {
+   margin: 5px;
+   height: 30vh;
+   width: 100%;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color:var(--abm);
+   overflow: auto;
+   background-color: var(--light);
+}  
+
+/* Work Section */
 .work {
     /* Adding scroll stop at start of element */
     scroll-snap-align: start;
     background-color: var(--work);
-    color: var(--light);
-    /*display:flex;*/
-    padding: 10px;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
+    display: flex;
+   /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
 }
-figure p {
+
+.subtitle-work {
+    background-color: var(--work);
+    margin: 1em;
+    width: 25%;
+    color: var(--light)
+} 
+
+main img {
+    background-color: var(--light);
+    opacity: 1;
+    border: #B1A296;
+    border-radius: 25px;
+    color: var(--header);
+    padding: 0em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.p-work {
+    position: relative;
+    left: 2em;
+    top: 2em;
     text-align: center;
-    color: var(--about-me);
-    align-content: center;
+    color: var(--light);
+    text-transform: uppercase;
+    text-shadow: 2px 2px;
+    font-weight: bold;
+    align-content: flex-start;
+    justify-content: center;
+    width: 10px;
+    height: 10px;
 }
 
-/* ---- FIX THIS ---- */
-.work-boxes {
-    width: 300px;
-    height: 300px;
-    flex: 2 1 50px;
-    display: inline-flex;
-    align-content: right;
-}    
-
-/* On hover sections grow */
-.work-html:active {
-    tranform: scale (1.5);
-    -webkit-transform: scale(1.5);
-    -ms-transform: scale(1.5);;
-}
-
-/* On hover sections grow */
-.work-css:active {
-    tranform: scale (1.5);
-    -webkit-transform: scale(1.5);
-    -ms-transform: scale(1.5);;
-}
-
-/* On hover sections grow */
-.work-js:active {
-    tranform: scale (1.5);
-    -webkit-transform: scale(1.5);
-    -ms-transform: scale(1.5);;
-}
-.resume{
+/* Work Subtitle section */
+.work {
     /* Adding scroll stop at the start of the section  */
     scroll-snap-align: start;
+    display: flex;
+    background-color: var(--work);
+}
+
+.subtitle-work {
+    background-color: var(--work);
+    margin: 1em;
+    width: 25%;
+    color: var(--light)
+} 
+
+/* Top box in Work image container */
+.work-content {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+.work-box-top img {
+    height: 75vh;
+    width: 98%;
+    object-fit: cover;
+}
+
+/* Bottom box in Work image container */
+.work-box-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.work-box-bottom img {
+    margin: 5px;
+    flex-direction: row;
+    height: 25vh;
+    width: 55%;
+}
+
+/* On click sections grow */
+.work-html:active {
+    transform: scale (1.5);
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);;
+}
+
+/* On click sections grow */
+.work-css:active {
+    transform: scale (1.5);
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);;
+}
+
+/* On click sections grow */
+.work-js:active {
+    transform: scale (1.5);
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);;
+}
+
+/* Resume Section */
+.resume {
+    /* Adding scroll stop at the start of the section  */
+    scroll-snap-align: start;
+    display: flex;
     background-color: var(--resume);
 }
 
+.subtitle-resume {
+    background-color: var(--resume);
+    margin: 1em;
+    width: 25%;
+    color: var(--light)
+} 
+
+pre code {
+    font-family: var(--article-fonts);
+}
+
+/* Footer Section */
 footer {
     background-color: var(--base); 
     color: var(--light);
@@ -226,14 +303,15 @@ footer {
 }
 
 footer section {
-    margin; auto;
+    margin: auto;
     font-size: 1.2em;
     text-align: left;
+    padding: 1em;
 }
 
 footer p {
     text-align: right;
-    margin-right: 1em;
+    margin-right: 1.5em;
 }
 .contact-me {
     scroll-snap-align: start;
@@ -253,36 +331,16 @@ footer p {
 
 
 /* Media Queries for Devices */
-
-/* Desktop */
-
-
-/* Tablets */
-
-
-/* Mobile */
-@media only screen and (max-device-width: 480px) {
-        /*div#wrapper {
-            width: 400px;
-        }*/
-
-        header {
-            background-image: url(#);
-            height: 93px;
-            position: relative;
-        }
-
-        header h1 {
-            font-size: 140%;
-        }
-
-        main {
-            float: none;
-            width: 100%;
-        }
-
-        nav {
-            float:none;
-            width: auto;
-        }
+/* Use flex-direction to stack the navbar, sidebar, and body */
+@media screen and (max-width: 768px) {
+    main, nav, article {
+    flex-direction: column;
+    margin: 0;
     }
+    h1 {
+        height: 80%;
+        width: 80%;
+        align-items: right;
+    }
+  }
+
