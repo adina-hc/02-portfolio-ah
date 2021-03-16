@@ -334,7 +334,7 @@ main img {
 }
 
 /* Logo adjustments */
-.resize-phone, .resize-mail, .resize-fb {
+.resize-phone, .resize-mail, .resize-fb, .resize-git {
     width: 3rem;
     size: 3rem;
     align-items: center;
