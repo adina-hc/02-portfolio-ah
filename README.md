@@ -25,6 +25,10 @@ Features:
 - Responsive layout:
     Content adapts to the page when resized on various screen and devices.
 
+Standards:
+
+- Use of semantic HTML elements
+
 SAMPLE:
 
 *** to include image/mock-up

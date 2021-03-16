@@ -2,7 +2,6 @@
 
 /* Template Variables */
 :root {
-    --wrk: #88BDBC;
     --contact-opt:#D1E8E2;
     --resume: #5D5C61;
     --work: #B1A296;
@@ -89,17 +88,16 @@ h1 {
 }
 
 /* Navigation Bar */
-
 nav {
     overflow: hidden;
 }
 
-nav ul {
+.nav-bar {
     /* To make the nav bar static even if scrolling occurs - see if it works, otherwise remove */
     position: fixed; 
     align-items: right;
-    top:0;
     right: 0;
+    top:0;
     
 }
 
@@ -362,32 +360,110 @@ footer p {
 } 
 
 /* Media Queries for Devices */
-/* Use flex-direction to stack the navbar, sidebar, and body */
+/* Use flex-direction to stack the navbar and body */
+
 @media screen and (max-width: 768px) {
-    main, article, .developer-name {
+    header {
+        width: 100%;
+    }
+
+    nav {
+        overflow: visible;
+    }
+
+    .nav-bar {
+    /* To make the nav bar static even if scrolling occurs - see if it works, otherwise remove */
+    position: fixed; 
+    align-items: center; 
+    }
+
+    .banner {
+        width: 100%
+    }
+    .about-me, .work, .resume, .contact-me {
+        width: 85%;
+    }
+        
+    main, article,  footer {
         flex-direction: column;
         margin: 0;
+        width: 118%;
         }
-        .profile-picture{
-            position: relative;
+    .profile-picture {
+        position: absolute;
+        flex-direction: column;
+    }
 
-        }
-        header {
-            width: 100%;
-        }
-        h1 {
-            position: relative;
-            height: 100%;
-            width: 100%;
-            align-items: right;
-        }
-        nav ul li {
-            display: column;
-            flex-direction: column;
-            width: 100%;
-        }
-        .about-me {
-            width: 100%;
-        }
-  }
+    .profile-picture, .contact-information, .banner .developer-name, .work-box-bottom {    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-bar{
+        display: block;
+        left: 35rem;
+        width: 10%
+    }
+    .work-box-top, .work-box-bottom {
+        height: 55%
+    }
+}
 
+@media screen and (max-width:1150px) {
+    nav{
+        overflow: visible;
+    }
+    .nav-var {
+        position: none;
+    }
+
+    header figure nav{
+        overflow: none;
+    }
+    
+    nav, nav ul {
+        position: relative; 
+        align-items: right;
+        top:0;
+        right: 0;
+    }
+    
+    h1{
+        font-size: 95%;
+    }
+    .profile-picture{
+        position: static;
+    }
+    .profile-picture, .developer-name, .contact-information {
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+/* Cell phone */
+@media screen and (max-width: 375px) {
+    *{
+        margin:0;
+    }
+    .banner {
+        width: 100%
+    }
+    nav {
+        overflow: visible;
+    }
+    .nav-bar{
+        position: fixed;
+        align-items: center;
+        overflow: visible;
+        display: block;
+        flex-direction: column;
+        left: 35rem;
+        width: 10%
+    }
+    .about-me, .work, .resume, .contact-me {
+        width: 85%;
+    }
+
+}
