@@ -366,44 +366,36 @@ footer p {
     header {
         width: 100%;
     }
-
     nav {
         overflow: visible;
     }
-
     .nav-bar {
-    /* To make the nav bar static even if scrolling occurs - see if it works, otherwise remove */
     position: fixed; 
     align-items: center; 
+    display: block;
+    right: 15rem;
+    width: 45%
     }
-
     .banner {
         width: 100%
     }
     .about-me, .work, .resume, .contact-me {
         width: 85%;
-    }
-        
+    }       
     main, article,  footer {
         flex-direction: column;
         margin: 0;
         width: 118%;
-        }
+    }
     .profile-picture {
         position: absolute;
         flex-direction: column;
     }
-
     .profile-picture, .contact-information, .banner .developer-name, .work-box-bottom {    
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-    .nav-bar{
-        display: block;
-        left: 35rem;
-        width: 10%
     }
     .work-box-top, .work-box-bottom {
         height: 55%
@@ -413,9 +405,14 @@ footer p {
 @media screen and (max-width:1150px) {
     nav{
         overflow: visible;
+        flex-direction: column;
     }
-    .nav-var {
-        position: none;
+    .nav-bar {
+    position: fixed; 
+    align-items: center; 
+    display: block;
+    right: 15rem;
+    width: 65%
     }
 
     header figure nav{
@@ -423,15 +420,19 @@ footer p {
     }
     
     nav, nav ul {
-        position: relative; 
-        align-items: right;
+        position: relative;
+        align-items: center;
         top:0;
         right: 0;
     }
     
-    h1{
-        font-size: 95%;
+    h1 {
+       display: fixed;
+       left: 2rem
     }
+    .developer-name {
+        font-size: 2rem;
+    }    
     .profile-picture{
         position: static;
     }
@@ -447,23 +448,38 @@ footer p {
     *{
         margin:0;
     }
+        header {
+        width: 100%;
+    }
     .banner {
         width: 100%
     }
+    .developer-name {
+        font-size: 2rem;
+    }
+    h1 {
+       display: flex;
+       font-size: 1.5rem;
+    }
+    .developer-name {
+       display: flex;
+       font-size: 30%;
+    } 
     nav {
         overflow: visible;
+    } 
+    .nav-bar {
+        position: fixed; 
+        align-items: left; 
     }
-    .nav-bar{
-        position: fixed;
-        align-items: center;
-        overflow: visible;
+    .nav-bar {
+        position: fixed; 
+        align-items: center; 
         display: block;
-        flex-direction: column;
-        left: 35rem;
+        right: 12rem;
         width: 10%
     }
     .about-me, .work, .resume, .contact-me {
         width: 85%;
     }
-
 }
