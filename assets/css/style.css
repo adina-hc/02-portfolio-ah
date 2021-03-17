@@ -473,7 +473,7 @@ footer p {
         position: fixed; 
         align-items: center; 
         display: block;
-        right: 10rem;
+        right: 8rem;
         width: 10%
     }
     .about-me, .work, .resume, .contact-me {
