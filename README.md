@@ -29,11 +29,8 @@ Standards:
 
 - Use of semantic HTML elements
 
-SAMPLE:
+SAMPLE and link to website:
 
-*** to include image/mock-up
-
-Link: ... to include link
 ![portfolio demo](./assets/images/portfolio1st.png)
 ![portfolio demo](./assets/images/portfolio2nd.png)
 [portfolio demo](https://adina-hc.github.io/portfolio-ah/)
