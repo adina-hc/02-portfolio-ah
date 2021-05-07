@@ -1,4 +1,4 @@
-<!-- ORIGINAL VERSION HTML AND CSS ONLY -->
+<!-- PORTFOLIO added materialize and JavaScript -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +8,14 @@
 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Materializecss -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
     <!--Links-->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/fix-materialize.css">
     
     <title>Portfolio</title>
 </head>
@@ -20,7 +25,7 @@
     <!-- HEADER -->
     <header>
     <!-- Header Banner -->
-        <figure class="banner">
+        <div class="banner">
             <img class="profile-picture" src="./assets/images/adina-portfolio.JPG" alt="Profile Picture"> 
             <div class="developer-name">
                 <h1>Adina Henderson</h1>
@@ -33,7 +38,7 @@
                     <li class="tab-contact"><a href="#contact-me">Contact me</a></li>
                 </ul>
             </nav>
-        </figure>
+        </div>
     </header>
     <main>
     <!-- About Me Container -->
@@ -45,36 +50,99 @@
             <!--  Article container -->
             <article class="article-content"> 
                 <p> Full Stack Web Developer in the making.
-                    This section will be gradually updated as the course progresses. Adding mock text to give length to the sections for functionality testing 
-                    ..   COMING SOON    ... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis neque quas provident esse possimus et minima laborum asperiores quaerat fugiat repellat explicabo natus animi quod assumenda veniam, architecto commodi eos.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, atque? Alias, possimus ... COMING SOON ... voluptatem? Atque odit qui saepe, modi repudiandae eaque, reprehenderit placeat excepturi eius aperiam temporibus? Ex, deleniti cum? Quos.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium voluptatibus, asperiores at laborum voluptatum dolor, optio id error consequuntur ab fugit est eius porro autem! ... COMING SOON ... Vero nulla aspernatur ab aliquid.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vel fuga porro omnis dolor esse saepe nam laudantium numquam, quisquam officiis corporis quas minima placeat adipisci? Saepe dolores laborum numquam?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto tempora laborum itaque dicta, consequatur velit accusantium optio laboriosam nostrum commodi cupiditate iusto, maxime vel amet iste corrupti unde neque. Distinctio?
+                    Currently a student of Tecnologico de Monterrey's Full Stack Web Development Bootcamp.
+                    Interested and preparing for a career change.
+                    I love challenge, music and languages.
                 </p>
             </article>
         </section>
     
 <!-- Work Section -->        
         <!-- work section container -->
-        <section id="work" class="work"> 
+        <section id="work" class="work section"> 
             <!-- Alignment of subtitles to the left-->
             <div class="subtitle-work subtitles"> 
                 <h2>Work</h2>
             </div>
             <!-- top image container -->
-            <section class="work-content">
-                <figure class="work-box-top"> 
-                    <p class="p-work">Project</p>
-                    <img id="project1"" src="./assets/images/keyboard.jpg" alt="Keyboard" class="work-html">
-                </figure>
-                <!-- bottom images container -->
-                <figure class="work-box-bottom"> 
-                    <p class="p-work">CSS Work</p>
-                    <img src="./assets/images/colorcode.jpg" alt="image of colored code" class="work-css">
-                    <p class="p-work">JavaScript Work</p>
-                    <img src="./assets/images/laptop-mobile.jpg" alt="image of a laptop and a cell phone" class="work-js">
-                </figure>
+            <section class="work-content section">
+
+                <!-- Materialize Cards -->
+
+                <!--<div class="row">
+                    <h2 class="header">Sports Almanac Project</h2>
+                    <div class="card horizontal col s11">
+                        <div class="card-image">
+                            <img src="./assets/images/sports-almanac.png">
+                        </div>
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <p>I am a very simple card. I am good at containing small bits of information.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#">Link to the Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <section class="row">
+                    <div class="sports-card">
+                        <div class="col s12">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="./assets/images/sports-almanac.png">
+                                    <span class="card-title">Sports Almanac</span>
+                                </div>
+                                <div class="card-content">
+                                    <p>The sports almanac application provides the user with meaningful information about soccer matches on a certain date, team information, and the ability to access video snippets related to that league's matches, goals, etc.</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="https://adina-hc.github.io/sports-almanac/">Link to the Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="oneLine row">
+                    <div class=" weather-card">
+                        <div class="col s6 newContainer">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="./assets/images/weather.png">
+                                    <span class="card-title">Weather Dashboard</span>
+                                </div>
+                                <div class="card-content">
+                                    <p>Weather Application featuring current weather and five day forecast for a city searched. <br>                     The information includes date, temperature, humidity, wind speed and only for the current weather, the current UV index.
+                                    </p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="https://adina-hc.github.io/06-weather-dashboard/">Link to Application</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" coding-card">
+                        <div class="col s6 ">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="./assets/images/coding-assessment.png">
+                                    <span class="card-title">Coding Assessment</span>
+                                </div>
+                                <div class="card-content">
+                                    <p>The Coding Assessment application features JavaScript timed multiple choice questions, and restults storage for history of high scores. <br>
+                                    </p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="https://adina-hc.github.io/04-coding-assessment/">Link to Application</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
             </section>
         </section>
 
@@ -85,18 +153,7 @@
                 <h2>Resume</h2>
             </div>
             <article class="article-content">
-                <p>Adding paragraphs for functionality testing, this section will be updated as the course progresses ... COMING SOON ... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis neque quas provident esse possimus
-                et minima laborum asperiores quaerat fugiat repellat explicabo natus animi quod assumenda veniam, architecto commodi
-                eos.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, atque? Alias, possimus ... COMING SOON ...
-                voluptatem? Atque odit qui saepe, modi repudiandae eaque, reprehenderit placeat excepturi eius aperiam temporibus? Ex,
-                deleniti cum? Quos.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium voluptatibus, asperiores at laborum voluptatum
-                dolor, optio id error consequuntur ab fugit est eius porro autem! ... COMING SOON ... Vero nulla aspernatur ab aliquid.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vel fuga porro omnis dolor esse saepe nam
-                laudantium numquam, quisquam officiis corporis quas minima placeat adipisci? Saepe dolores laborum numquam?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto tempora laborum itaque dicta, consequatur velit
-                accusantium optio laboriosam nostrum commodi cupiditate iusto, maxime vel amet iste corrupti unde neque. Distinctio?</p>
+                <iframe type="application/pdf" src="./assets/AH-Resume.pdf" frameborder="0"></iframe>
             </article>
         </section>
         
@@ -111,7 +168,7 @@
             <!-- Contact-info container (3)-->
             <ul class="contact-information">
                 <li>
-                    <a href="(513)512-5663)">
+                    <a href="(513)512-5663">
                         <img src="./assets/images/bluephone.png" alt="Call Number" class="resize-phone">
                     </a>
                 </li>
@@ -138,7 +195,7 @@
     </footer>
 
 <!-- Links to scripts -->
-<script src="./Develop/script.js"></script>
+<script src="./develop/script.js"></script>
 
 
 </body>

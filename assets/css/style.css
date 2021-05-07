@@ -49,8 +49,7 @@ header {
   position: sticky;
   top: 5%;
   left: 2%;
-  margin-left: 0.5rem;
-  border-radius: 20px;
+  border-radius: 90px;
   padding: 5px;
   height: 150px;
   width: 150px;
@@ -63,6 +62,7 @@ header {
 }
 
 h1 {
+  margin: 15px;
   width: 100%;
   height: 10rem;
   font-family: var(--other-fonts);
@@ -104,9 +104,11 @@ nav {
 
 nav ul li {
   display: inline-block;
-  padding: 0.4em;
+  padding: 0.1em;
+  margin: 0.4em;
   border-radius: 10px;
   width: 10pc;
+  height: auto;
   align-content: right;
   text-align: center;
 }
@@ -146,9 +148,12 @@ article {
   background-color: var(--light);
   opacity: 0.4;
   border-radius: 25px;
-  padding: 2em;
+  padding: 1em;
   margin: 1em;
+  height: fit-content;
 }
+
+
 
 /* About Me Section */
 
@@ -286,11 +291,16 @@ main img {
   -ms-transform: scale(1.5);
 }
 
+span.card-title {
+  color: var(--contact);
+}
+
 /* Resume Section */
 .resume {
   /* Adding scroll stop at the start of the section  */
   scroll-snap-align: start;
   display: flex;
+  height: 20%;
   background-color: var(--resume);
 }
 
@@ -433,7 +443,7 @@ footer p {
 
   nav,
   nav ul {
-    position: relative;
+    position: none;
     align-items: center;
     top: 0;
     right: 0;
