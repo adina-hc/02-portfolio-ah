@@ -33,5 +33,5 @@ SAMPLE and link to website:
 
 ![portfolio demo](./assets/images/portfolio1st.png)
 ![portfolio demo](./assets/images/portfolio2nd.png)
-[portfolio link](https://adina-hc.github.io/portfolio-ah/)
+[portfolio link](https://adina-hc.github.io/02-portfolio-ah/)
 [github link](https://github.com/adina-hc/portfolio-ah)
