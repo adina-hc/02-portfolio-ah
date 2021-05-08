@@ -21,17 +21,22 @@ Features:
 - Dynamic scrolling 
     *UI scrolls to the section with titled images of the developer's applications
 - Images included under work section:
-    On click, images grow in size as they are presented to the reader
+    On click of links, viewer is redirected to the different websites for view of work and contact information
 - Responsive layout:
     Content adapts to the page when resized on various screen and devices.
 
-Standards:
+Resources:
 
-- Use of semantic HTML elements
+- HTML
+- Materialize CSS
+- SASS and CSS
+- JavaScript for materialize initialization
+- Pdf embedded document
+
 
 SAMPLE and link to website:
 
-![portfolio demo](./assets/images/portfolio1st.png)
-![portfolio demo](./assets/images/portfolio2nd.png)
+![portfolio demo](./assets/images/portfolio.gif)
+
 [portfolio link](https://adina-hc.github.io/02-portfolio-ah/)
 [github link](https://github.com/adina-hc/portfolio-ah)
