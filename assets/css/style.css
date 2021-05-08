@@ -98,6 +98,7 @@ nav {
   /* To make the nav bar static even if scrolling occurs - see if it works, otherwise remove */
   position: fixed;
   align-items: right;
+  z-index: 2;
   right: 0;
   top: 0;
 }
