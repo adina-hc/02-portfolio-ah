@@ -273,21 +273,7 @@ main img {
 }
 
 /* On click sections grow */
-.work-html:active {
-  transform: scale (1.5);
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-}
-
-/* On click sections grow */
-.work-css:active {
-  transform: scale (1.5);
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-}
-
-/* On click sections grow */
-.work-js:active {
+img:active {
   transform: scale (1.5);
   -webkit-transform: scale(1.5);
   -ms-transform: scale(1.5);
@@ -381,6 +367,12 @@ footer p {
   header {
     width: 100%;
   }
+
+  img .profile-picture {
+    align-items: right;
+    align-content: right;
+  }
+
   nav {
     overflow: visible;
   }
@@ -480,6 +472,7 @@ footer p {
   .banner {
     width: 100%;
   }
+  
   h1 {
     display: flex;
     font-size: 1.5rem;
