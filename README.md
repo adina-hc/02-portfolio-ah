@@ -1,4 +1,4 @@
-# portfolio-ah
+# Portfolio
 
 Portfolio exercise
 
@@ -38,5 +38,5 @@ SAMPLE and link to website:
 
 ![portfolio demo](./assets/images/portfolio.gif)
 
-[portfolio link](https://adina-hc.github.io/02-portfolio-ah/)
+[portfolio link](https://adina-hc.github.io/portfolio-ah/)
 [github link](https://github.com/adina-hc/portfolio-ah)
